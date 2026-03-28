@@ -75,7 +75,7 @@ public class AgeCalculator extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAgeResult, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtAgeResult, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(40, 40, 40))
@@ -112,12 +112,16 @@ public class AgeCalculator extends javax.swing.JFrame {
 
     private void btnCalculatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculatorActionPerformed
         // TODO add your handling code here:
-        String strNum = spnAgeImput.getValue().toString();
-        int num = Integer.parseInt(strNum);
+        //cria um inteiro que recebe como valor, o numero informado no spinner de colocar o ano de nascimento
+        int num = (int) spnAgeImput.getValue();
         
+        //cria um inteiro que calcula o ano atual (2026) menos o ano informado do spinner.
         int result = 2026 - num;
+        
+        //para informamos o resultado, precisamos antes transformar ele em texto para aparecer na label.
         String strResult = String.valueOf(result);
         
+        //atualizamos a label para que ela informe a idade da pessoa.
         txtAgeResult.setText(strResult);
     }//GEN-LAST:event_btnCalculatorActionPerformed
 
