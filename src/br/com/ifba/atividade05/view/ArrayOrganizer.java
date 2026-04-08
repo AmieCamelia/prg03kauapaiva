@@ -12,8 +12,11 @@ import javax.swing.DefaultListModel;
  * @author kpaiv
  */
 public class ArrayOrganizer extends javax.swing.JFrame {
+    //criação do vetor.
     int vetor[] = new int[5];
+    //criação da lista em que se será organizado o vetor.
     DefaultListModel lista = new DefaultListModel();
+    //variavel que possibilitará escolher qual posição do vetor desejará colocar ou remover algum numero.
     int selecionar = 0;
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ArrayOrganizer.class.getName());
@@ -23,6 +26,7 @@ public class ArrayOrganizer extends javax.swing.JFrame {
      */
     public ArrayOrganizer() {
         initComponents();
+        //para que ao começar o programa, já tenha uma lista pro usuario poder clicar nas posições.
         for (int n : vetor) {
             lista.addElement(n);
         }
@@ -128,8 +132,11 @@ public class ArrayOrganizer extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
+        //insere no vetor o valor que o usuario escolher e na posição q ele também escolher.
         vetor[selecionar] = (int) spnNumber.getValue();
         
+        /*atualiza a lista com o vetor atual, primeiro limpando ela, e depois adicionando em cada andar da lista o valor do vetor,
+        isso será repetido diversas vezes.*/
         lista.removeAllElements();
         for (int n : vetor) {
             lista.addElement(n);
@@ -138,8 +145,11 @@ public class ArrayOrganizer extends javax.swing.JFrame {
 
     private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
         // TODO add your handling code here:
+        /*"limpa" a posição, trocando o numero que estava por zero, pra esse botão não ficar em desuso, fiz o spinner rodar apenas
+        numeros positivos começando por 1.*/
         vetor[selecionar] = 0;
         
+        //codigo para atualizar a lista
         lista.removeAllElements();
         for (int n : vetor) {
             lista.addElement(n);
@@ -148,18 +158,25 @@ public class ArrayOrganizer extends javax.swing.JFrame {
 
     private void btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderActionPerformed
         // TODO add your handling code here:
+        //para fazer a organização primeiro é preciso ter uma copia do numero pra não perder seu valor na hora da organização.
         int copia = 0;
-        Arrays.sort(vetor);
+        
+        //caminha o vetor inteiro.
         for (int n = 0; n < vetor.length; n++) {
+            //verifica todos os vetores na frente, começando pela casa do vetor seguinte ao atual.
             for (int i = n+1; i < vetor.length; i++) {
+                //se o vetor atual for maior que o proximo...
                 if (vetor[n] > vetor[i]) {
+                    //coloca o valor do proximo guardando na copia...
                     copia = vetor[i];
+                    //passa o valor do atual pra casa do proximo...
                     vetor[i] = vetor[n];
+                    //como o valor do proximo estava guardado, passamos ele pra sua nova casa a partir da copia...
                     vetor[n] = copia;
                 }
             }
         }
-        
+        //codigo para atualizar a lista
         lista.removeAllElements();
         for (int n : vetor) {
             lista.addElement(n);
@@ -169,7 +186,9 @@ public class ArrayOrganizer extends javax.swing.JFrame {
 
     private void lstArrayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstArrayMouseClicked
         // TODO add your handling code here:
+        //para permitir selecionar a casa do vetor a partir da lista.
         selecionar = lstArray.getSelectedIndex();
+        //mostra vizualmente para o usuario qual posição do vetor está selecionada atualmente.
         txtArray.setText("" + selecionar);
     }//GEN-LAST:event_lstArrayMouseClicked
 
