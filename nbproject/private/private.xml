@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade07/view/interfacePagamentos.java</file>
-            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade07/model/PagamentoDinheiro.java</file>
-            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade07/model/PagamentoCartao.java</file>
-            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade07/model/PagamentoPix.java</file>
+            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade08/Main.java</file>
+            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade08/Model/PerfilUsuario.java</file>
+            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade08/Model/Usuario.java</file>
+            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade08/Model/Sessao.java</file>
+            <file>file:/C:/Users/kpaiv/OneDrive/Documentos/NetBeansProjects/prg03kauapaiva/src/br/com/ifba/atividade08/Model/LogAuditoria.java</file>
         </group>
     </open-files>
 </project-private>
